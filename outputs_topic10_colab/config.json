@@ -1,0 +1,52 @@
+{
+  "git_commit": "not-a-git-repo",
+  "CATEGORIES": [
+    "tile",
+    "transistor"
+  ],
+  "IMG_SIZE": 224,
+  "CACHE_SIZE": 256,
+  "BATCH_SIZE": 16,
+  "EPOCHS": 30,
+  "PATIENCE": 6,
+  "SPLIT_SEED": 42,
+  "SEEDS": [
+    0
+  ],
+  "TARGET_FPR": 0.05,
+  "MODES": {
+    "scratch": {
+      "pretrained": false,
+      "train_backbone": true,
+      "backbone_lr": 0.001,
+      "head_lr": 0.001
+    },
+    "frozen": {
+      "pretrained": true,
+      "train_backbone": false,
+      "backbone_lr": 0.0,
+      "head_lr": 0.001
+    },
+    "finetune": {
+      "pretrained": true,
+      "train_backbone": true,
+      "backbone_lr": 0.0001,
+      "head_lr": 0.0001
+    },
+    "discriminative": {
+      "pretrained": true,
+      "train_backbone": true,
+      "backbone_lr": 0.0001,
+      "head_lr": 0.001
+    }
+  },
+  "optimizer": "AdamW(weight_decay=0.05)",
+  "scheduler": "CosineAnnealingLR",
+  "early_stopping": "val loss",
+  "env": {
+    "python": "3.13.16",
+    "torch": "2.14.1+cu130",
+    "torchvision": "0.29.1+cu130",
+    "device": "Tesla T4"
+  }
+}
