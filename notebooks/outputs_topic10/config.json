@@ -1,7 +1,8 @@
 {
-  "git_commit": "fff35eb-dirty",
+  "git_commit": "920e056-dirty",
   "CATEGORIES": [
-    "tile",
+    "carpet",
+    "bottle",
     "transistor"
   ],
   "IMG_SIZE": 224,
@@ -11,7 +12,9 @@
   "PATIENCE": 6,
   "SPLIT_SEED": 42,
   "SEEDS": [
-    0
+    0,
+    1,
+    2
   ],
   "TARGET_FPR": 0.05,
   "MODES": {
